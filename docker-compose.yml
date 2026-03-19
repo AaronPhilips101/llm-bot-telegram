@@ -1,0 +1,9 @@
+services:
+  telegram-ai-bot:
+    build: .
+    container_name: telegram-ai-bot
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    environment:
+      CONFIG_PATH: /app/config.yaml
+    restart: unless-stopped

@@ -1,0 +1,23 @@
+telegram:
+ bot_token: "YOUR_TELEGRAM_BOT_TOKEN"
+ allow_private_chats: true
+ allow_all_groups: true
+ allowed_group_ids: []
+
+ai:
+ base_url: "https://api.openai.com"
+ api_key: "YOUR_OPENAI_API_KEY"
+ model: "gpt-4o-mini"
+ temperature: 0.3
+ max_tokens: 400
+ timeout_seconds: 30
+ system_prompt: "You are a helpful assistant."
+ error_reply: "Sorry, I couldn't reach the AI service. Please try again."
+
+rate_limits:
+ per_user_per_minute: 12
+ per_chat_per_minute: 30
+ exceeded_message: "You're sending messages too quickly. Please wait a moment."
+
+context:
+ max_reply_chain: 8
